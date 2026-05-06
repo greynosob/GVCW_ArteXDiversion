@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArteXDiversion - GVCW</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            color: #333;
+        }
+
+        /* Header con logo GVCW */
+        .header {
+            padding: 30px 20px;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header img {
+            max-width: 150px;
+            height: auto;
+        }
+
+        /* Contenedor principal */
+        .container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        /* Logo principal */
+        .logo-section {
+            margin-bottom: 50px;
+            animation: fadeInScale 0.8s ease-in-out;
+        }
+
+        .logo-section img {
+            max-width: 300px;
+            height: auto;
+            filter: drop-shadow(0 4px 15px rgba(0, 0, 0, 0.2));
+        }
+
+        /* Sección de construcción */
+        .construction-section {
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+            animation: fadeInUp 0.8s ease-in-out 0.3s both;
+        }
+
+        .construction-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .construction-section h1 {
+            font-size: 28px;
+            color: #667eea;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .construction-section p {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .construction-badge {
+            display: inline-block;
+            background-color: #667eea;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-top: 20px;
+        }
+
+        /* Footer */
+        .footer {
+            padding: 20px;
+            text-align: center;
+            color: white;
+            font-size: 14px;
+        }
+
+        /* Animaciones */
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header img {
+                max-width: 120px;
+            }
+
+            .logo-section img {
+                max-width: 250px;
+            }
+
+            .construction-section {
+                padding: 30px;
+            }
+
+            .construction-section h1 {
+                font-size: 24px;
+            }
+
+            .construction-section p {
+                font-size: 14px;
+            }
+
+            .construction-icon {
+                font-size: 40px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header {
+                padding: 20px 10px;
+            }
+
+            .header img {
+                max-width: 100px;
+            }
+
+            .container {
+                padding: 20px 10px;
+            }
+
+            .logo-section {
+                margin-bottom: 30px;
+            }
+
+            .logo-section img {
+                max-width: 180px;
+            }
+
+            .construction-section {
+                padding: 20px;
+            }
+
+            .construction-section h1 {
+                font-size: 20px;
+            }
+
+            .construction-icon {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+<body>   
+    <!-- Contenedor principal -->
+    <main class="container">
+        <!-- Logo ArteXDiversion -->
+        <div class="logo-section">
+            <img src="assets/arteXdiversionlogo.png" alt="ArteXDiversion">
+        </div>
+
+        <!-- Sección de construcción -->
+        <div class="construction-section">
+            <div class="construction-icon">🚧</div>
+            <h1>Página en Construcción</h1>
+            <p>Estamos trabajando para traerte una experiencia increíble.</p>
+            <p>Vuelve pronto para descubrir todo lo que ArteXDiversion tiene preparado para ti.</p>
+            <span class="construction-badge">Próximamente</span>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 GVCW - ArteXDiversion. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
