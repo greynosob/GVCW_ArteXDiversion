@@ -1,0 +1,39 @@
+---
+layout: default
+title: "Etiquetas"
+---
+
+<h1>Etiquetas</h1>
+
+{% assign tags = "" | split: "," %}
+{% for item in site.images %}
+  {% for t in item.tags %}
+    {% assign tags = tags | push: t %}
+  {% endfor %}
+{% endfor %}
+
+{% assign unique_tags = tags | uniq | sort %}
+
+<ul class="tag-list">
+  {% for tag in unique_tags %}
+    <li><a href="#{{ tag | uri_escape }}">{{ tag }}</a></li>
+  {% endfor %}
+</ul>
+
+<div class="tag-results">
+  {% for tag in unique_tags %}
+    <section id="{{ tag | uri_escape }}">
+      <h2>{{ tag }}</h2>
+      <div class="grid">
+        {% for item in site.images %}
+          {% if item.tags contains tag and item.is_hidden != true %}
+            <article>
+              <a href="{{ item.url }}"><img src="{{ item.image_url }}" alt="{{ item.title }}"></a>
+              <h3><a href="{{ item.url }}">{{ item.title }}</a></h3>
+            </article>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </section>
+  {% endfor %}
+</div>

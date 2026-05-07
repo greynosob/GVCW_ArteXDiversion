@@ -1,0 +1,23 @@
+---
+layout: default
+title: "Secciones"
+---
+
+<h1>Secciones</h1>
+
+{% assign visible_images = site.images | where: "is_hidden", false %}
+{% assign grouped = visible_images | group_by: "section" %}
+
+{% for group in grouped %}
+  <section id="{{ group.name | uri_escape }}">
+    <h2>{{ group.name }}</h2>
+    <div class="grid">
+      {% for item in group.items %}
+        <article>
+          <a href="{{ item.url }}"><img src="{{ item.image_url }}" alt="{{ item.title }}"></a>
+          <h3><a href="{{ item.url }}">{{ item.title }}</a></h3>
+        </article>
+      {% endfor %}
+    </div>
+  </section>
+{% endfor %}

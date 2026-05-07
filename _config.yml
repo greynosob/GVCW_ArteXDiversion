@@ -1,0 +1,18 @@
+title: "ArteXDiversion"
+email: ""
+description: "Galería de imágenes - GVCW"
+baseurl: "" # the subpath of your site, e.g. /repo-name
+url: "https://your-username.github.io/your-repo" # change before publishing
+
+collections:
+  images:
+    output: true
+    permalink: /images/:name/
+
+markdown: kramdown
+theme: minima
+
+# Jekyll build settings
+exclude:
+  - node_modules
+  - vendor
